@@ -9,7 +9,7 @@ async function start(){
   var router = new Router()
 
   app
-//    .use(cors({ 'Access-Control-Allow-Origin': '*' }))
+    .use(cors({ 'Access-Control-Allow-Origin': '*' }))
     .use(koaBody())
     .use(router.routes())
     .use(router.allowedMethods())
