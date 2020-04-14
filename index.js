@@ -14,6 +14,7 @@ async function start(){
     .use(router.routes())
     .use(router.allowedMethods())
 
+
   router.get('/', async (ctx, next) => {
     ctx.response.body = {ok:'ok'}
   })
