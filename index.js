@@ -16,13 +16,25 @@ async function start(){
 
 
   router.get('/', async (ctx, next) => {
-    ctx.response.body = {ok:'ok'}
+    ctx.response.body = {get:'ok'}
   })
 
 
   router.post('/', async (ctx, next) => {
-    ctx.response.body = {'result':'ok'}
+    ctx.response.body = {'post':'ok'}
   })
+
+  router.get('/404', async (ctx, next) => {
+    ctx.response.body = {'get':'404'}
+    ctx.response.status = 404
+  })
+
+
+  router.post('/404', async (ctx, next) => {
+    ctx.response.body = {'post':'404'}
+    ctx.response.status = 404
+  })
+
 
   console.log("API server has started")
   app.listen(3000)
